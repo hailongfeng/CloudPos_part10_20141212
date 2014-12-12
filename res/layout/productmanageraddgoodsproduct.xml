@@ -1,0 +1,191 @@
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prdmg_good_viewflipper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/catalog_bg" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            layout="@layout/productmanageritem_top2" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="96dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="560dp"
+                android:paddingBottom="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/prdmg_goods_productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/prdmg_goods_producteditinputname"
+                    android:layout_alignBottom="@+id/prdmg_goods_producteditinputname"
+                    android:layout_alignLeft="@+id/prdmg_goods_productattr"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/name"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/prdmg_goods_productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_alignBottom="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_alignLeft="@+id/prdmg_goods_productname"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/price"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/prdmg_goods_kindtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/prdmg_goods_productprice"
+                    android:layout_below="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/cate"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/prdmg_goods_producteditinputname"
+                    style="@style/input_style"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/editshape"
+                    android:hint="@string/input_name"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="@integer/product_name_limit_length"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" >
+
+                    <requestFocus />
+                </EditText>
+
+                <EditText
+                    android:id="@+id/prdmg_goods_producteditinputprice"
+                    style="@style/input_style"
+                    android:layout_width="310dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@id/prdmg_goods_producteditinputname"
+                    android:layout_below="@id/prdmg_goods_producteditinputname"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/editshape"
+                    android:hint="@string/input_price"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="@integer/price_limit_length"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/prdmg_goods_showBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_alignRight="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_below="@+id/prdmg_goods_producteditinputprice"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_roundconer_selector"
+                    android:gravity="left|center"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="20sp" />
+                <!-- android:background="@drawable/button_roundconer_selector" -->
+
+                <ImageView
+                    android:id="@+id/prdmg_attr_listview_top_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/prdmg_goods_showBtn"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/product_line" />
+
+                <Button
+                    android:id="@+id/prdmg_goods_productattr"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/prdmg_attr_listview_top_image"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/attribute_button_xml"
+                    android:drawableLeft="@drawable/proudct_update_add"
+                    android:drawablePadding="10dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:text="@string/add_product_attr"
+                    android:textSize="25sp" />
+
+                <ImageView
+                    android:id="@+id/prdmg_attr_listview_bottom_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/prdmg_goods_productattr"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@drawable/product_line" />
+				<!-- 当前商品的属性 -->
+                <ListView
+                    android:id="@+id/prdmg_good_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/prdmg_goods_productattr"
+                    android:layout_alignRight="@id/prdmg_goods_productattr"
+                    android:layout_below="@id/prdmg_attr_listview_bottom_image" >
+                </ListView>
+				<!-- 删除商品 -->
+                <Button
+                    android:id="@+id/prdmg_good_deleteBtn"
+                    style="@style/manager_delete_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/prdmg_good_listview"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/manager_delet_select"
+                    android:shadowColor="#000"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/delete_product"
+                    android:textColor="@color/gray_color" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+	<!-- 选择属性 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="95dp"
+            layout="@layout/productmanageritem_top3" />
+		<!-- 所有属性的列表 -->
+        <ListView
+            android:id="@+id/prdmg_good_attrlistview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="96dp" >
+        </ListView>
+    </RelativeLayout>
+
+</ViewFlipper>

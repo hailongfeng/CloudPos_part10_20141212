@@ -1,0 +1,47 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+ 
+    <Button
+        android:id="@+id/leftbar_alldeal_back"
+        android:layout_width="@dimen/back_btn_width"
+        android:layout_height="@dimen/back_btn_height"
+        android:background="@drawable/leftbar_back_button_xml" />
+    <Button
+        android:id="@+id/date_picker"
+        android:layout_width="73dp"
+        android:layout_height="49dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_roundconer_selector"
+        android:drawableLeft="@drawable/statistics_icon"
+        android:paddingLeft="13dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/leftbar_alldeal_back"
+        android:gravity="center"
+        android:textColor="@color/text_normal_color"
+        android:layout_toRightOf="@+id/leftbar_alldeal_back"
+        android:layout_toLeftOf="@+id/date_picker"
+        android:text="@string/all_record"
+        android:textSize="30sp" />
+    <ImageView   
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leftbar_alldeal_back"
+        android:background="@drawable/left_grayline" />
+    
+    <com.cynovo.sirius.widget.MyExpandableListView
+        android:id="@+id/leftbar_all_expandListview"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent" 
+        android:layout_below="@+id/leftbar_alldeal_back"
+        android:drawSelectorOnTop="true"
+        android:cacheColorHint="@android:color/transparent">
+      </com.cynovo.sirius.widget.MyExpandableListView>
+    
+</RelativeLayout>

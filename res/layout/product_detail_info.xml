@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+    
+
+    <TextView
+        android:id="@+id/prodect_name"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@+id/product_price"
+        android:layout_toRightOf="@+id/product_image"
+        android:maxLines="2"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="30sp" /> 
+
+    <com.cynovo.sirius.widget.MoneyView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:maxWidth="160dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/text_normal_color"
+        android:layout_marginRight="50dp" />
+ 
+</RelativeLayout>

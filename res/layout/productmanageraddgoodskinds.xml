@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/catalog_bg">
+    
+    <include layout="@layout/productmanageritem_top1"
+        android:layout_width="fill_parent"
+        android:layout_height="95dp" />
+    
+    <TextView
+        android:id="@+id/prdmg_kind_kindname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignBaseline="@+id/prdmg_kind_editinput"
+        android:layout_alignBottom="@+id/prdmg_kind_editinput"
+        android:layout_alignLeft="@+id/prdmg_kind_delete"
+        android:text="@string/cate_name"
+        android:textSize="25sp" />
+    
+    <EditText
+        android:id="@+id/prdmg_kind_editinput"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/prdmg_kind_kindname"
+        android:hint="@string/input_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="145dp"
+        android:textSize="20sp"
+        android:paddingLeft="10dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:background="@drawable/editshape"
+        android:cursorVisible="true"
+        android:maxLength="@integer/product_name_limit_length"
+        style="@style/input_style"  >
+         <requestFocus />
+        </EditText>
+    
+    <Button
+        android:id="@+id/prdmg_kind_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+ 		android:layout_marginBottom="15dp"
+        android:background="@drawable/manager_delet_select"
+        android:text="@string/delete_cate"
+        style="@style/manager_delete_btn"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/gray_color"
+        android:shadowColor="#000"
+        android:shadowDy="1"
+        android:shadowRadius="1" />
+
+    
+    
+</RelativeLayout>

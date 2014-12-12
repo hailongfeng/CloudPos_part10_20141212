@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pattern1" >
+
+    <Button
+        android:id="@+id/leftbar_detail_back"
+        android:layout_width="@dimen/back_btn_width"
+        android:layout_height="60dp"
+        android:background="@drawable/leftbar_back_button_xml" />
+
+    <Button
+        android:id="@+id/order_printer"
+        android:layout_width="73dp"
+        android:layout_height="49dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_roundconer_selector"
+        android:drawableLeft="@drawable/small_print_print"
+        android:paddingLeft="23dp" />
+
+    <com.cynovo.sirius.widget.MoneyView
+        android:id="@+id/leftbarproductprice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leftbar_detail_back"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/order_printer"
+        android:layout_toRightOf="@+id/leftbar_detail_back"
+        android:gravity="center"
+        android:textColor="@color/text_normal_color"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/leftbarimageview_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leftbar_detail_back"
+        android:background="@drawable/left_grayline" />
+
+    <ScrollView
+        android:id="@+id/scrollview_left"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/leftbar_detail_back"
+        android:layout_marginLeft="25dp"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/lr_button_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/left_button"
+                    android:layout_width="210dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_roundconer_selector"
+                    android:drawableLeft="@drawable/send_receipt36"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/send_orderinfo"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/right_button"
+                    android:layout_width="210dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_roundconer_selector"
+                    android:drawableLeft="@drawable/receipt_cencel36"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/revocation_order"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/leftbar_deal_more"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/lr_button_group"
+                android:layout_below="@+id/lr_button_group"
+                android:layout_marginTop="5dp"
+                android:background="#00FFFFFF"
+                android:drawableBottom="@drawable/leftbar_blueline_long"
+                android:text="@string/order_detail"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/leftbar_pay_method"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/leftbar_deal_more"
+                android:layout_below="@+id/leftbar_deal_more"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/card36"
+                android:drawablePadding="50dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/leftbar_deal_deal_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/leftbar_pay_method"
+                android:layout_below="@+id/leftbar_pay_method"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/receipt_num36"
+                android:drawablePadding="50dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/leftbar_deal_deal_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/leftbar_deal_deal_number"
+                android:layout_below="@+id/leftbar_deal_deal_number"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/time36"
+                android:drawablePadding="50dp"
+                android:gravity="left"
+                android:paddingRight="80dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/leftbar_deal_user_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/leftbar_deal_deal_number"
+                android:layout_below="@+id/leftbar_deal_deal_time"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/sale_user"
+                android:drawablePadding="50dp"
+                android:gravity="left"
+                android:paddingRight="80dp"
+                android:textSize="25sp" />
+
+            <ListView
+                android:id="@+id/leftbarlistviewdeal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leftbar_deal_user_name"
+                android:layout_marginTop="20dp"
+                android:drawSelectorOnTop="true"
+                android:listSelector="@android:color/transparent"
+                android:fillViewport="true"
+                android:scrollbars="none" />
+
+            <Button
+                android:id="@+id/leftbar_checkout_deal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/leftbarlistviewdeal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_roundconer_selector"
+                android:text="@string/lookup_bills"
+                android:textColor="@color/text_normal_color"
+                android:textSize="30sp" >
+            </Button>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

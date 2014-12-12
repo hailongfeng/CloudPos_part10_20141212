@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/catalog_bg" >
+	
+    <include
+        android:id="@+id/botton_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/list_bottom" />
+        
+    <ViewFlipper
+        android:id="@+id/allproductFlipper"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botton_bar"
+        android:flipInterval="200"
+        android:persistentDrawingCache="animation" >
+
+        <fragment
+            android:id="@+id/ProductListFragment"
+            android:name="com.cynovo.sirius.fragment.ProductListFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <fragment
+            android:id="@+id/ManualInputFragment"
+            android:name="com.cynovo.sirius.fragment.ManualInputFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </ViewFlipper>
+
+
+
+</RelativeLayout>

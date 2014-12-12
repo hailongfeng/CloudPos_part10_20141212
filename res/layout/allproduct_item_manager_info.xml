@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/cate_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/cate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:maxWidth="500dp"
+        android:maxLines="2"
+        android:layout_alignBottom="@+id/cate_pic"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+       	android:layout_toLeftOf="@+id/product_count"
+       	android:layout_toRightOf="@+id/cate_pic"
+		android:layout_centerVertical="true"
+		android:gravity="center_vertical|left"
+        android:textSize="30sp" />
+	
+    <Button
+        android:id="@+id/cate_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:background="@drawable/button_roundconer_selector" 
+        android:drawableLeft="@drawable/write"
+        android:paddingLeft="20dp"/>
+        
+    <com.cynovo.sirius.widget.MoneyView
+        android:id="@+id/product_count"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_toLeftOf="@+id/cate_edit"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textSize="30sp" />
+    
+</RelativeLayout>

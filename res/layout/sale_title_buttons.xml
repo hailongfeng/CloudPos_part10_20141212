@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/sale_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/title_button_xml"
+            android:drawableLeft="@drawable/head_user"
+            android:text="@string/username"
+            android:textColor="@color/text_normal_color" />
+        
+         <ImageView 
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="#818181"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/sale_user_name"
+            android:layout_centerVertical="true" />
+
+        <Button
+            android:id="@+id/sale_recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="10dp"
+            android:text="@string/resent_sale"
+            android:layout_toRightOf="@+id/sale_user_name"
+            android:textColor="@color/text_normal_color"
+            
+            android:background="@drawable/title_button_xml"
+            android:drawableLeft="@drawable/head_recent"/>
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/sale_recent"
+            android:layout_marginLeft="5dp"
+            android:background="#818181"
+            android:layout_centerVertical="true" />
+        
+         <Button
+            android:id="@+id/productmanager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/control_panel"
+            android:layout_toRightOf="@+id/sale_recent"
+            android:textColor="@color/text_normal_color"
+            android:background="@drawable/title_button_xml"
+            android:drawableLeft="@drawable/head_dash2"/>
+        
+</RelativeLayout>

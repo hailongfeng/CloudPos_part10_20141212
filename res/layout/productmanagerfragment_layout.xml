@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/dkjfkk"
+        android:layout_width="770dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/catalog_bg" >
+
+        <include
+            android:layout_width="770dp"
+            android:layout_height="510dp"
+            layout="@layout/productmanager_top" />
+
+        <ViewFlipper
+            android:id="@+id/prodect_manager_list"
+            android:layout_width="770dp"
+            android:layout_height="520dp"
+            android:layout_marginTop="95dp"
+            android:flipInterval="200"
+            android:persistentDrawingCache="animation" >
+
+            <ListView
+                android:id="@+id/catemanager_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ListView
+                android:id="@+id/productmanager_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ListView
+                android:id="@+id/product_attr_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <ListView
+                android:id="@+id/product_onsale_listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </ViewFlipper>
+
+        <include
+            android:layout_width="770dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/prodect_manager_list"
+            layout="@layout/productlistbottom_layout" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/productShowItemFragment"
+        android:layout_width="470dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/dkjfkk" >
+    </FrameLayout>
+
+</RelativeLayout>

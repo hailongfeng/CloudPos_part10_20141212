@@ -1,0 +1,32 @@
+ 
+   <ViewFlipper
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       android:id="@+id/leftbarlistproduct"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent" >
+        
+ 	   <com.cynovo.sirius.widget.MyExpandableListView
+            android:id="@+id/leftbarexpandListview"
+        	android:layout_height="fill_parent"
+           	android:layout_width="fill_parent" 
+        	android:drawSelectorOnTop="true"
+        	android:scrollbars="none"
+        	android:cacheColorHint="@android:color/transparent">
+      </com.cynovo.sirius.widget.MyExpandableListView>
+ 		
+ 	  <ListView
+ 		  android:id="@+id/leftbarshowallrecentsaleproduct"
+ 		  android:layout_width="fill_parent"
+ 		  android:layout_height="fill_parent" >
+ 	  </ListView>
+ 	  <!-- 
+ 	  <include
+ 	      android:id="@+id/lkskdlfjk"
+ 	      layout="@layout/leftbarproductiteminfo1"
+ 	      android:layout_width="fill_parent"
+ 	      android:layout_height="fill_parent">
+ 	      
+ 	  </include>"
+ 	  --> 
+ </ViewFlipper>
+ 

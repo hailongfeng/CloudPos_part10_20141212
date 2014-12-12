@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/catalog_bg" >
+
+    <ViewFlipper
+        android:id="@+id/salelistviewflliper"
+        android:layout_width="fill_parent"
+        android:layout_height="95dp"
+        android:flipInterval="200"
+        android:persistentDrawingCache="animation" >
+
+        <include layout="@layout/sale_show_list_top1" />
+
+        <include layout="@layout/sale_show_list_top2" />
+    </ViewFlipper>
+    
+    <fragment
+        android:id="@+id/SaleProductListFragment"
+        android:name="com.cynovo.sirius.fragment.ShoppingCartProductFragment"
+        android:layout_below="@id/salelistviewflliper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    
+<!--  
+    <include
+        android:id="@+id/include"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        layout="@layout/sale_show_list_middle_list" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cart_cover"
+        android:textColor="@color/text_normal_color"
+        android:textSize="30sp"
+        android:text="@string/shopping_car" />
+-->
+</RelativeLayout>

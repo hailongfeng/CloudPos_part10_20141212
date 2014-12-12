@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@drawable/catalog_bg">
+  
+     <RelativeLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+   		android:background="@drawable/catalog_top"
+    	android:padding="0dp" > 
+    	<Button
+        	android:id="@+id/prdmg_onsale_btn"
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="24dp"
+       		android:layout_marginRight="24dp"
+        	android:layout_marginTop="10dp"
+       	 	android:gravity="center"
+        	android:background="@drawable/button_roundconer_selector"
+        	android:text="@string/save_onsale"
+        	android:textSize="30sp" />
+      </RelativeLayout>  
+      
+     <EditText
+         android:id="@+id/prdmg_onsale_name_edittext"
+         android:layout_width="300dp"
+         android:layout_height="50dp"
+         android:layout_marginTop="125dp"
+         android:layout_marginRight="24dp"
+         android:layout_alignParentRight="true"
+         android:background="@drawable/editshape"
+         android:hint="@string/input_name"
+         android:paddingLeft="10dp"
+         android:inputType="text"
+         android:maxLength="20"
+         android:imeOptions="actionDone"
+         style="@style/input_style" />
+     
+     <TextView
+         android:id="@+id/prdmg_onsale_name_textview"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@id/prdmg_onsale_name_edittext"
+         android:layout_alignBottom="@id/prdmg_onsale_name_edittext"
+         android:layout_marginLeft="24dp"
+         android:layout_alignParentLeft="true"
+         android:text="@string/onsale_name"
+         android:textSize="25sp" />
+     
+     <RelativeLayout
+         android:id="@+id/global_relayout"
+         android:layout_width="300dp"
+         android:layout_height="50dp"
+         android:layout_marginRight="24dp"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="25dp"
+         android:layout_below="@id/prdmg_onsale_name_edittext" >
+         
+
+        <EditText
+            android:id="@+id/prdmg_onsale_kind_edittext"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="@string/input_price_float"
+            android:layout_marginTop="3dp"
+            android:inputType="numberDecimal|numberSigned"
+            android:imeOptions="actionDone"
+            android:paddingLeft="10dp"
+            android:background="@drawable/input_0"
+            android:maxLength="@integer/price_limit_length"
+            style="@style/input_style" >
+             <requestFocus />
+            
+        </EditText>
+
+          <RadioGroup
+                android:id="@+id/btn_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignTop="@id/prdmg_onsale_kind_edittext"
+                android:layout_toRightOf="@id/prdmg_onsale_kind_edittext"
+                android:layout_alignParentRight="true" >
+                <RadioButton
+		      		android:id="@+id/radio_money"
+		        	android:layout_width="50dp"
+		        	android:layout_height="wrap_content"
+		        	android:background="@drawable/rmb_layout" 
+		        	android:textColor="@color/text_normal_color"
+		        	android:textSize="20sp"
+		        	android:gravity="center" 
+		        	android:clickable="true"
+		        	android:checked="true"
+		        	android:button="@android:color/transparent"
+		        	android:text="@string/onsale_money"/> 
+                <RadioButton
+		      		android:id="@+id/radio_percent"
+		        	android:layout_width="50dp"
+		        	android:layout_height="wrap_content"
+		        	android:background="@drawable/percent_layout" 
+		        	android:textColor="@color/text_normal_color"
+		        	android:textSize="20sp"
+		        	android:gravity="center"
+		        	android:button="@android:color/transparent"
+		        	android:text="@string/onsale_percent"/> 
+                
+            </RadioGroup>
+            
+         
+     </RelativeLayout>
+ 
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@id/global_relayout"
+         android:layout_below="@id/prdmg_onsale_name_textview"
+         android:layout_marginTop="30dp"
+         android:text="@string/price_float"
+         android:textSize="25sp"
+         android:layout_alignParentLeft="true"
+         android:layout_marginLeft="24dp" />
+     
+     <Button
+            android:id="@+id/prdmg_onsale_delete_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/gray_color"
+            style="@style/manager_delete_btn"
+            android:background="@drawable/manager_delet_select"
+            android:text="@string/delete_onsale"
+            android:shadowColor="#000"
+        	android:shadowDy="1"
+        	android:shadowRadius="1" />
+        
+         
+    
+</RelativeLayout>
